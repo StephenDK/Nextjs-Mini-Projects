@@ -19,6 +19,8 @@ export default function SnippetEditForm({ snippet }: SnippetEditFormProps) {
     setCode(value);
   };
 
+  const editSnippetAction = actions.editSnippet.bind(null, snippet.id, code);
+
   return (
     <div>
       <Editer
@@ -31,6 +33,9 @@ export default function SnippetEditForm({ snippet }: SnippetEditFormProps) {
         }}
         onChange={handleEditorChange}
       />
+      <form action={editSnippetAction}>
+        <button className="p-2 border rounded">Save</button>
+      </form>
     </div>
   );
 }
