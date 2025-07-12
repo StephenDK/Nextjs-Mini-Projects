@@ -4,6 +4,10 @@ import type { Snippet } from "@/generated/prisma";
 import Editer from "@monaco-editor/react";
 import { useState } from "react";
 
+// import { editSnippet } from "@/actions";
+// or
+import * as actions from "@/actions";
+
 interface SnippetEditFormProps {
   snippet: Snippet;
 }
