@@ -20,3 +20,28 @@ export async function deleteSnippet(id: number) {
   });
   redirect("/");
 }
+
+export async function createSnippet(
+  formState: { message: string },
+  formData: FormData
+) {
+  return {
+    message: "title must be longer",
+  };
+  //   // Validate user input
+  //   const title = formData.get("title") as string;
+  //   const code = formData.get("code") as string;
+
+  //   // Create a new DataBase record
+  //   const snippet = await db.snippet.create({
+  //     data: {
+  //       title,
+  //       code,
+  //     },
+  //   });
+
+  //   console.log(snippet);
+
+  //   // Redirect user to back to home
+  //   redirect("/");
+}
